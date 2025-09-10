@@ -1,0 +1,130 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/presets' as *;
+@use '../../../styles/typography' as *;
+
+// versão desktop
+
+.navbar{
+    
+    background-color: $Color-primary;
+    width: 100%;
+    height: 6.7rem;
+    box-shadow: #00000025 0px 7px 11.4px -1px;
+
+    &__logo{
+        margin-top: 50px;
+        width: 162.56px;
+    }
+        .off{
+        display: none;
+    
+    }
+
+    // estilização para quando logado
+        .on{
+        display: none;
+        align-items: center;
+        margin: auto;
+        gap: 20px;
+        margin-left: 20px;
+        justify-content: space-between;
+
+        &__element{
+            width: 1px;
+            height: 25px;
+            background-color: white;
+        }
+
+        &__content{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            font-size: $Font-size6;
+            color: $Color-white;
+        }
+
+        &__logout{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 10px;
+            background-color: #ffffff60;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 100px; 
+            
+        }
+        img{
+            align-items: center;
+            justify-content: center;
+            height: 25px;
+            filter: brightness(1000);
+        }
+    }
+    
+}
+
+// versão desktop
+
+@media (min-width:1024px){
+.navbar{
+    height: 5rem;
+    justify-content: left;
+
+    &__logo{
+        margin: 0px 0px 0px 50px;
+        width: 162.56px;
+    }
+
+    //estilização para quando deslogado com classe off
+    .off{
+        display: none;
+    
+    }
+
+    // estilização para quando logado
+        .on{
+        display: flex;
+        align-items: center;
+        margin: auto;
+        gap: 20px;
+        margin-left: 20px;
+        justify-content: space-between;
+
+        &__element{
+            width: 1px;
+            height: 25px;
+            background-color: white;
+        }
+
+        &__content{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 20px;
+            font-size: $Font-size6;
+            color: $Color-white;
+        }
+
+        &__logout{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 50rem;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 100px; 
+            
+        }
+        img{
+            align-items: center;
+            justify-content: center;
+            height: 25px;
+            filter: brightness(1000);
+        }
+    }
+}
+}

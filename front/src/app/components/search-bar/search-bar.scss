@@ -1,0 +1,144 @@
+@use '../../../styles/presets' as *;
+@use '../../../styles/typography' as *;
+@use '../../../styles/variables' as *;
+
+// versão mobile
+.searchbar {
+    background-color: #A4A4A435;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+    width: 92%;
+    margin-top: 20px;
+    border-radius: 8px;
+    gap: 5px;
+
+    button {
+        border: none;
+    }
+
+
+    &__container {
+        display: flex;
+        width: 90%;
+        margin-top: 10px;
+        margin: 10px 10px;
+        gap: 10px;
+
+        &__search {
+            position: absolute;
+            margin: 10px 0px 0px 10px;
+        }
+
+        input {
+            width: 14rem;
+            height: 40px;
+            padding: 0px 0px 0px 50px;
+            border: none;
+            border-radius: 8px;
+        }
+
+        button {
+            background-color: $Color-grey3;
+            border-radius: 5px;
+            width: 15%;
+            height: 40px;
+            justify-content: center;
+            color: $Color-white;
+
+            p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                font-size: $Font-size3;
+                font-weight: $Font-light;
+            }
+        }
+    }
+
+    &__container__submit {
+        width: 100%;
+
+
+        button {
+            background-color: $Color-secondary;
+            border-radius: 5px;
+            width: 90%;
+            height: 45px;
+            justify-content: center;
+            color: $Color-white;
+            margin: 10px 20px;
+            
+            
+
+            p {
+                display: flex;
+                margin: auto;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                font-size: $Font-size3;
+                font-weight: $Font-light;
+            }
+        }
+
+        button:hover {
+            background-color: #15a2ee;
+            transition-duration: 0.5s;
+        }
+    }
+}
+
+// versão desktop
+@media (min-width:1024px) {
+    .searchbar {
+        flex-direction: row;
+        width: 60%;
+        padding: 15px 10px;
+        margin-top: 20px;
+        gap: 5px;
+
+        &__container {
+            width: 99%;
+            margin: 5px 20px;
+            gap: 20px;
+
+            &__search {
+                position: absolute;
+                margin: 15px 0px 0px 10px;
+                
+                
+            }
+
+            input {
+                width: 28rem;
+                height: 50px;
+                padding: 0px 0px 0px 50px;
+                font-size: $Font-size5;
+                font-weight: $Font-light;
+            }
+
+            button {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        &__container__submit {
+            margin: 0px;
+
+            button {
+                border-radius: 5px;
+                width: 12rem;
+                height: 50px;
+                margin: 0px;
+
+                p {
+                    gap: 10px;
+                }
+            }
+        }
+    }
+}
+

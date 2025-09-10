@@ -1,0 +1,16 @@
+<search class="searchbar flex justify-center">
+    <div class="searchbar__container ">
+        <label for="">
+            <img class="searchbar__container__search" src="/Assets/Search.svg" alt="icone de lupa">
+            <input type="text" name="" id="" placeholder="Buscar tarefa..." (input)="searchInput($event)">
+        </label>
+        <!--botão modal filtro materia (pendente logica para adição da classe open no devido modal)-->
+        <button class="searchbar__container__filter"><img src="Assets/Filter.svg" alt="icone de filtro"></button>
+    </div>
+    <!--botão modal add atividade (pendente logica para adição da classe open no devido modal)-->
+    <div class="searchbar__container__submit">
+        <button (click)="openModal()">
+            <p><img src="/Assets/Add.svg" alt="icone de +"> Nova tarefa</p>
+        </button>
+    </div>
+</search>

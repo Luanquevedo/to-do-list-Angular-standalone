@@ -1,0 +1,228 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/typography' as *;
+
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+
+    &__container {
+        height: 1150px;
+
+        &__text {
+            width: 60%;
+            margin: auto;
+        }
+
+        &__cards {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+    }
+}
+
+// Modal para adição de novas tasks
+.modaladd {
+    display: none;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        background-color: white;
+        width: 600px;
+        height: 300px;
+        margin: auto;
+
+
+        &__header {
+            display: flex;
+            justify-content: right;
+            gap: 200px;
+
+            button{
+                border: none;
+                background-color: transparent;
+                font-size: $Font-size2;
+                margin-right: 20px;
+            }
+        }
+
+        &__inputT {
+            margin: 0px 50px;
+
+            input {
+                width: 500px;
+                height: 100px;
+                border: none;
+                background-color: $Color-grey-light;
+                border-radius: 8px;
+                box-shadow: #89898950 0px 4px 8px;
+            }
+
+        }
+
+        &__inputM {
+            margin: 50px 50px;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                width: 350px;
+                height: 40px;
+                border: none;
+                background-color: $Color-grey-light;
+                border-radius: 8px;
+                box-shadow: #89898950 0px 4px 8px;
+            }
+
+            button {
+                width: 100px;
+                border: none;
+                border-radius: 5px;
+                background-color: $Color-secondary;
+                color: white;
+
+            }
+
+        }
+    }
+}
+
+// Modal para remoção de novas tasks
+.modaledit {
+    display: none;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        background-color: white;
+        width: 600px;
+        height: 300px;
+        margin: auto;
+
+
+        &__header {
+            display: flex;
+            justify-content: right;
+            gap: 200px;
+            button{
+                border: none;
+                background-color: transparent;
+                font-size: $Font-size2;
+                margin-right: 20px;
+            }
+        }
+
+        &__inputT {
+            margin: 0px 50px;
+
+            input {
+                width: 500px;
+                height: 100px;
+                border: none;
+                background-color: $Color-grey-light;
+                border-radius: 8px;
+                box-shadow: #89898950 0px 4px 8px;
+            }
+
+        }
+
+        &__inputM {
+            margin: 50px 50px;
+            display: flex;
+            justify-content: space-between;
+
+            input {
+                width: 350px;
+                height: 40px;
+                border: none;
+                background-color: $Color-grey-light;
+                border-radius: 8px;
+                box-shadow: #89898950 0px 4px 8px;
+            }
+
+            button {
+                width: 100px;
+                border: none;
+                border-radius: 5px;
+                background-color: $Color-secondary;
+                color: white;
+
+            }
+
+        }
+    }
+}
+
+// Modal para remoção de novas tasks
+.modaldelet {
+    display: none;
+
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        background-color: white;
+        width: 600px;
+        height: 300px;
+        margin: auto;
+
+
+        &__header {
+            display: flex;
+            justify-content: center;
+            gap: 200px;
+            color: rgb(247, 85, 85);
+        }
+
+        &__inputT {
+            margin: auto;
+        }
+
+        &__inputM {
+            margin: 25px 70px;
+            display: flex;
+            justify-content: space-between;
+
+            &__btnA {
+                button {
+                    width: 150px;
+                    height: 50px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: $Color-grey-light;
+                    color: black;
+
+                }
+            }
+
+            &__btnB {
+                button {
+                    width: 150px;
+                    height: 50px;
+                    border: none;
+                    border-radius: 5px;
+                    background-color: rgb(247, 85, 85);
+                    color: black;
+
+                }
+            }
+        }
+
+
+    }
+}
+
+//criar event para adicionar classe .open
+//estilização em caso de modal estar com classe open
+.open {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.247);
+}

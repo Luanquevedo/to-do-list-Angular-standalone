@@ -1,0 +1,16 @@
+<nav class="navbar logado flex justify-center">
+    <img class="navbar__logo" src="Assets/logo-objetivo.svg" alt="logo objetivo">
+    <!--seção com elementos quando logado. Caso tenha sucesso no login é adicionado a class on e realiza a remoção da mesma em caso de logou. (obs: opção não funciona no mobile devido pendencia de responsividade nessa parte)-->
+    <div class="off flex"[class.on]='isLogado' >
+        <div class="on__element"></div>
+        <div class="on__content flex">
+            <img src="Assets/logo-tarefa.png" alt="icone de caderno">
+            <h2>Tarefas do aluno</h2>
+        </div>
+        <div>
+            <button class="on__logout" (click)="sair()" >
+                <img src="Assets/Logout.svg" alt="Logout image">
+            </button>
+        </div>
+    </div>
+</nav>

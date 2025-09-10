@@ -1,0 +1,79 @@
+<body class="home">
+    <!--Contem açoes para funcionalidade para definir class on para caso logado e event para deslogar e retornar a tela inicial-->
+    <app-nav [isLogado]="true" (logout)="deslogar()"></app-nav>
+    <section class="home__container">
+        <app-card-aluno></app-card-aluno>
+        <!--Contem açoes para funcionalidade de busca, abertura e fechamento de modal-->
+        <app-search-bar (searchBar)="procurarTarefa($event)" (isOpenModal)="toggleClassModalAdd()"></app-search-bar>
+        <div class="home__container__text">
+            <p>Sua anotações:</p>
+        </div>
+        <div class="home__container__cards">
+            <!--Contem açoes para funcionalidade de busca, renderização de cards, abertura e fechamento de modal-->
+            <app-card-task (isOpenModalEdit)="toggleClassModalEdit(task)"
+                (isOpenModalDelete)="toggleClassModalDelete(task)" *ngFor="let task of filteredTasks" [task]="task">
+            </app-card-task>
+        </div>
+    </section>
+    <app-footer class="footer"></app-footer>
+    <!--Modal de adição de task com adição e remoção da class open captura de text area para cadastro-->
+    <div class="modaladd" [class.open]="toggleClassModalAddVar">
+        <div class="modaladd__container">
+            <div class="modaladd__container__header">
+                <h2><img src="/Assets/Add.svg" alt="icone +">Nova tarefa</h2>
+                <button (click)="closeModalAdd()">x</button>
+            </div>
+            <div class="modaladd__container__inputT">
+                <label for="">
+                    <input type="text" name="tarefa" id="" placeholder="teste" [(ngModel)]="cadastroTask.textTask">
+                </label>
+            </div>
+            <div class="modaladd__container__inputM">
+                <label for="">
+                    <input type="text" name="materia" id="" placeholder="teste" [(ngModel)]="cadastroTask.textMateria">
+                </label>
+                <button (click)="criarTarefa()" (click)="closeModalAdd()">Finalizar</button>
+            </div>
+        </div>
+    </div>
+    <!--Modal de edição com adição, remoção da class open e alteração de text area dos inputs com base na task selecionada-->
+    <div class="modaledit " [class.open]="toggleClassModalEditVar">
+        <div class="modaledit__container">
+            <div class="modaledit__container__header">
+                <h2><img src="/Assets/Edit.svg" alt="icone lapis">editar</h2>
+                <button (click)="closeModalEdit()">x</button>
+            </div>
+            <div class="modaledit__container__inputT" *ngIf="taskSelecionada">
+                <label for="">
+                    <input type="text" name="tarefa" id="" placeholder="teste" [(ngModel)]="taskSelecionada.textTask">
+                </label>
+            </div>
+            <div class="modaledit__container__inputM" *ngIf="taskSelecionada">
+                <label for="">
+                    <input type="text" name="materia" id="" placeholder="teste"
+                        [(ngModel)]="taskSelecionada.textMateria">
+                </label>
+                <button (click)="editarTarefa()">Finalizar</button>
+            </div>
+        </div>
+    </div>
+    <!--Modal de exclusão com adição, remoção da class open, eventos para fechar modal e realizar exclusão de task-->
+    <div class="modaldelet" [class.open]="toggleClassModalDeleteVar">
+        <div class="modaldelet__container">
+            <div class="modaldelet__container__header">
+                <h2><img src="/Assets/Edit.svg" alt="icone lapis">Excluir tarefa</h2>
+            </div>
+            <div class="modaldelet__container__inputT">
+                <p>Tem certeza que deseja excluir?</p>
+            </div>
+            <div class="modaldelet__container__inputM">
+                <div class="modaldelet__container__inputM__btnA">
+                    <button class="btnA" (click)="closeModalDelete()">Cancelar</button>
+                </div>
+                <div class="modaldelet__container__inputM__btnB">
+                    <button id="btnb" (click)="deletarTarefa()">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

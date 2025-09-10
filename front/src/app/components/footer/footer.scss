@@ -1,0 +1,34 @@
+@use '../../../styles/presets' as *;
+@use '../../../styles/variables' as *;
+@use '../../../styles/typography' as *;
+
+.footer {
+    width: 100%;
+    height: 6.7rem;
+    background-color: $Color-primary;
+    color: $Color-white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: $Font-size6;
+    font-weight: $Font-light;
+
+    &__content{
+        width: 332.68px;
+    }
+
+    a{
+        color: white;
+    }
+}
+
+@media (min-width:1024px){
+.footer {
+    height: 5.3rem;
+    &__content{
+        max-width: 1440px;
+        width: 731px;
+        font-size: $Font-size5;
+    }
+}
+}

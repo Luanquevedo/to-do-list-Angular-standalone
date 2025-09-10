@@ -1,0 +1,63 @@
+@use '../../../styles/variables' as *;
+@use '../../../styles/presets' as *;
+@use '../../../styles/typography' as *;
+
+// versão mobile
+
+.cardprofile {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $Color-white;
+    margin: auto;
+    box-shadow: #89898950 0px 4px 8px;
+    width: 92%;
+    border-radius: 8px;
+    margin-top: 30px;
+    padding: 15px 0px;
+
+    &__content {
+        text-align: center;
+
+        h2 {
+            font-size: $Font-size2;
+            font-weight: $Font-medium;
+            margin-top: 0px;
+        }
+
+        p {
+            font-size: $Font-size5;
+            color: $Color-grey2;
+            font-weight: $Font-medium;
+        }
+    }
+
+    img {
+        width: 130px;
+    }
+}
+
+// versão desktop
+
+@media (min-width:1024px) {
+    .cardprofile {
+        max-width: 1440px;
+        width: 60%;
+        flex-direction: row;
+        justify-content: left;
+        padding: 15px 10px;
+        gap: 30px;
+
+        &__content {
+            text-align: justify;
+
+            h2 {
+                margin-bottom: 0px;
+            }
+        }
+
+        img {
+            width: 130px;
+        }
+    }
+}

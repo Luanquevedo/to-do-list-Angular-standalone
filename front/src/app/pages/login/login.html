@@ -1,0 +1,25 @@
+<body class="page">
+    <app-nav class="page__navbar"></app-nav>
+    <div class="page__login flex-col justify-center aling-center">
+        <div class="page__login__header">
+            <img src="Assets/logo-tarefa.png" alt="Logo Tarefa">
+            <h1>Tarefas do aluno</h1>
+        </div>
+        <!--form para login de usuario contem event para realizar login passando o parametro $event para ignorar o href e corrigir o erro estrutural para validação do login-->
+        <form class="flex-col" action="">
+            <div>
+                <label>
+                    <input type="email" name="login-email" id="" placeholder="E-mail" [(ngModel)]="email">
+                </label>
+            </div>
+            <div>
+                <label for="">
+                    <input type="text" name="login-senha" id="Senha" placeholder="senha" [(ngModel)]="senha">
+                </label>
+            </div>
+        </form>
+        <a  target="_blank" rel="noopener noreferrer">Esqueceu a senha?</a>
+        <button type="submit"><a href="gerenciador-de-tarefas" (click)="login($event)">Entrar</a></button>
+    </div>
+    <app-footer></app-footer>
+</body>

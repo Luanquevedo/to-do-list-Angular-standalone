@@ -1,0 +1,24 @@
+ <!--Contem parametros necessarios para ser renderizado os conteudos das tasks disponibilizadas no DB (obs: sera disponibilizado o import ddo DB base Mysql utilizado)-->
+<section class="card flex">
+    <div class="card__intup check flex">
+        <label for="">
+            <input type="checkbox" name="concluida" id="">
+        </label>
+        <p>{{ task.textTask }}</p>
+    </div>
+    <div class="card__content flex">
+        <div class="card__content__materia">
+            <button>{{ task.textMateria }}</button>
+        </div>
+        <div class="card__content__btn">
+            <button (click)="openModalEdit()">
+                <img src="/Assets/Edit.svg" alt="botão de edição">
+            </button>
+        </div>
+        <div class="card__content__btn">
+            <button (click)="openModalDelete()">
+                <img src="/Assets/Remove.svg" alt="botão de exclusão">
+            </button>
+        </div>
+    </div>
+</section>
