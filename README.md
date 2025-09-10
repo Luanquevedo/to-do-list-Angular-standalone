@@ -68,4 +68,4 @@
 - pasta com arquivo de conexao com db e apis criadas precisam estar dentro da htdocs caso utilize xampp para fazer o servidor apache rodar todas Apis
 - Necessario fornecer url,usuario e senha de acesso ao DB no arquivo *database.php* dentro da pasta *src* 
 - Projeto angular necessario rodar comando *ng s -o* para inicio do projeto
-- **OBS: Caso não esteja sendo utilizado a rota padrão http://localhost/api-teste-luanQuevedo-unip/ Sera necessario atualizar todas rotas dentro da pasta services**
+- **OBS: Caso não esteja sendo utilizado a rota padrão http://localhost/api-teste-luanQuevedo/ Sera necessario atualizar todas rotas dentro da pasta services**
